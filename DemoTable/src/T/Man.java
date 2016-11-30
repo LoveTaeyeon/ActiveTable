@@ -13,6 +13,11 @@ public class Man {
 		return SEX;
 	}
 
+	public Man() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Man(String name) {
 		super();
 		this.name = name;

@@ -1,6 +1,7 @@
 package demo;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 
 public class TDemo {
 
@@ -37,6 +38,11 @@ public class TDemo {
 		Field fields[] = temp.getDeclaredFields();
 		Object obj = temp.newInstance();
 		for(Field field : fields){
+			//获取属性的声明，跳过static属性
+			String type = Modifier.toString(field.getModifiers());
+			if(type.indexOf("static") != -1){
+				continue;
+			}
 			//私有属性访问权限设置
 			field.setAccessible(true);
 			field.set(obj,field.getName());

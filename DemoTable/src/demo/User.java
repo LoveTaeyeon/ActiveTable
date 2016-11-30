@@ -24,8 +24,10 @@ public class User {
 	}
 
 	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, InstantiationException {
-		User user = new User();
-		System.out.println(TDemo.getString(user));
+		Man man = new Man("");
+		Woman woman = new Woman("");
+		System.out.println(TDemo.getString(man));
+		System.out.println(TDemo.getString(woman));
 	}
 
 	public User() {

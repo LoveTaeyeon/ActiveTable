@@ -13,6 +13,11 @@ private static final String SEX = "WOMEN";
 		return SEX;
 	}
 
+	public Woman() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Woman(String name) {
 		super();
 		this.name = name;
