@@ -3,6 +3,8 @@ package demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import T.Man;
+import T.Woman;
 import net.sf.json.JSONArray;
 
 public class User {
@@ -21,18 +23,9 @@ public class User {
 		this.jsonData = jsonData;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, InstantiationException {
 		User user = new User();
-		user.setTable("姓名,年龄,性别");
-		user.setSex("M");
-		user.setName("韩硕");
-		user.setAge("21");
-		User u = new User("ss", "ss", "15", "M");
-		List<User> users = new ArrayList<User>();
-		users.add(user);
-		users.add(u);
-		String jsonData = JSONArray.fromObject(users).toString();
-		System.out.println(jsonData);
+		System.out.println(TDemo.getString(user));
 	}
 
 	public User() {
@@ -49,7 +42,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [table=" + table + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
+		return "My User [table=" + table + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
 	}
 
 	public String getTable() {

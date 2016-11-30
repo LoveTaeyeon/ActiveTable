@@ -29,7 +29,7 @@ public class TableServlet implements Servlet {
         String type = request.getParameter("type");
         if(type.equals("initTable")){
         	User user = new User();
-    		user.setTable("姓名,年龄,性别,颜值");
+    		user.setTable("陈,长,阳");
     		List<User> users = new ArrayList<User>();
     		users.add(user);
     		String jsonData = JSONArray.fromObject(users).toString();
